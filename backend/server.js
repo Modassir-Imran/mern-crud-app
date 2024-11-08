@@ -7,7 +7,7 @@ const connectDB = require('./config/db');
 
 // CORS Configuration
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'http://localhost:3001', // Allow only frontend origin
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
@@ -15,7 +15,9 @@ app.use(cors({
 // Middleware
 app.use(express.json());
 connectDB();
-
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
 // Health check route
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'Server is running' });
