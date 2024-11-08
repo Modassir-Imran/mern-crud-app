@@ -14,7 +14,4 @@ router.put('/:id', recordController.updateRecord);
 // DELETE record
 router.delete('/:id', recordController.deleteRecord);
 
-// Check if Client ID exists
-router.get('/check-client-id/:clientId', recordController.checkClientId);
-
 module.exports = router;

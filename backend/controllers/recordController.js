@@ -86,14 +86,3 @@ exports.deleteRecord = async (req, res) => {
     res.status(500).json({ message: 'Error deleting record', error: error.message });
   }
 };
-
-exports.checkClientId = async (req, res) => {
-  try {
-    const { clientId } = req.params;
-    const existingRecord = await Record.findOne({ CliendId: clientId });
-    res.json({ exists: !!existingRecord });
-  } catch (error) {
-    console.error('Error checking Client ID:', error);
-    res.status(500).json({ message: 'Error checking Client ID', error: error.message });
-  }
-};
