@@ -32,7 +32,9 @@ const connectDB = async () => {
 };
 
 connectDB();
-
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
 // Health check route
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'Server is running' });
