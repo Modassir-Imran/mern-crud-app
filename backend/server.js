@@ -7,7 +7,7 @@ const connectDB = require('./config/db');
 
 // CORS Configuration
 app.use(cors({
-  origin: 'https://mern-crud-app-frontend-red.vercel.app/', // Allow only frontend origin
+  origin: 'https://mern-crud-app-frontend-red.vercel.app', // Allow only frontend origin
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
