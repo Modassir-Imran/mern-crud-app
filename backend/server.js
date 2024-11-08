@@ -7,7 +7,7 @@ const connectDB = require('./config/db');
 
 // CORS Configuration
 app.use(cors({
-  origin: 'http://localhost:3001', // Allow only frontend origin
+  origin: 'http://localhost:3000', // Allow only frontend origin
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
